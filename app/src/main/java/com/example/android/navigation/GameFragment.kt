@@ -23,7 +23,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.findNavController
+import androidx.navigation.*
 import com.example.android.navigation.databinding.FragmentGameBinding
 
 class GameFragment : Fragment() {
@@ -101,12 +101,18 @@ class GameFragment : Fragment() {
                         // TODO (05) Find the navController from the view and navigate to the gameWonFragment
                         // call view.findNavController
                         // navigate to R.id.action_gameFragment_to_gameWonFragment
+                        view.findNavController().navigate(
+                                R.id.action_gameFragment_to_gameWonFragment
+                        )
                     }
                 } else {
                     // Game over! A wrong answer sends us to the gameOverFragment.
                     // TODO (06) Find the navController from the view and navigate to the gameOverFragment
                     // call view.findNavController
                     // navigate to R.id.action_gameFragment_to_gameOverFragment
+                    view.findNavController().navigate(
+                            R.id.action_gameFragment_to_gameOverFragment2
+                    )
                 }
             }
         }
